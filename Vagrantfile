@@ -72,12 +72,17 @@ Vagrant.configure("2") do |config|
   #   # You may also specify custom JSON attributes:
   #   chef.json = { :mysql_password => "foo" }
   # end
+  
+  # config.vm.provision :shell, :path => "bootstrap.sh"
 
   # Enable provisioning with chef server, specifying the chef server URL,
   # and the path to the validation key (relative to this Vagrantfile).
   #
   # config.vm.provision :chef_client do |chef|
   #   chef.chef_server_url = "https://api.opscode.com/organizations/jarsevertest"
+  #   chef.node_name "node1"
+  #   chef.add_recipe "apt"
+  #   chef.add_recipe "apache"
   #   chef.validation_client_name = "jarsevertest-validator"
   #   chef.validation_key_path = ".chef/jarsevertest-validator.pem"
   # end
